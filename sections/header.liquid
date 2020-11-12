@@ -1,0 +1,28 @@
+
+<header class="header caps">
+  <div class="width">
+
+    <a class="header-logo" href="/">
+      <span class="mobile">{% include 'home-hero-text-mobile.svg' %}</span>
+      <span class="desktop">{% include 'home-hero-text.svg' %}</span>
+    </a>
+
+    <a class="header-cart">
+      Cart ({{ cart.item_count }})
+    </a>
+
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ]
+}
+{% endschema %}

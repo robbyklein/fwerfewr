@@ -1,0 +1,158 @@
+{% assign homeProduct = all_products['puzzle'] %}
+
+<div class="home-hero">
+  <div class="width">
+
+    <div class="home-hero-text">
+      <span class="desktop">{% include 'home-hero-text.svg'%}</span>
+      <span class="mobile">{% include 'home-hero-text-mobile.svg'%}</span>
+    </div>
+
+    <div class="home-hero-buttons">
+      <p class="center-text"><a href="{{ homeProduct.url }}" class="button fixed-260">Win the game</a></p>
+    </div>
+
+  </div>
+</div>
+
+<div class="home-split">
+  <div class="home-split-left">
+    <div class="home-split-left-image">
+      <img src="{{ 'home-box.jpg' | asset_url }}"/>
+    </div>
+  </div>
+  <div class="home-split-right">
+    <div class="home-split-right-text">
+      <h2>How it Works</h2>
+      <ul>
+        <li>
+          <strong>1.</strong><br>
+          Buy this jigsaw puzzle
+        </li>
+
+        <li>
+          <strong>2.</strong><br>
+          Complete this puzzle
+        </li>
+
+        <li>
+          <strong>3.</strong><br>
+          Scan your completed puzzle<br>
+          (Hint: it’s a large QR code)
+        </li>
+
+        <li>
+          <strong>4.</strong><br>
+          You can either win or win. 
+        </li>
+
+        <li>
+          <strong>5.</strong><br>
+          Could be $.25. Could be $100,000
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="home-images">
+  <div class="width">
+
+    <div class="home-images-grid">
+      <div class="home-images-grid-item">
+        <div class="home-images-grid-item-image">
+          <img src="{{ 'home-box.jpg' | asset_url }}"/>
+        </div>
+      </div>
+
+      <div class="home-images-grid-item">
+        <div class="home-images-grid-item-image">
+          <img src="{{ 'home-box.jpg' | asset_url }}"/>
+        </div>
+      </div>
+
+      <div class="home-images-grid-item">
+        <div class="home-images-grid-item-image">
+          <img src="{{ 'home-box.jpg' | asset_url }}"/>
+        </div>
+      </div>
+
+      <div class="home-images-grid-item">
+        <div class="home-images-grid-item-image">
+          <img src="{{ 'home-box.jpg' | asset_url }}"/>
+        </div>
+      </div>
+
+      <div class="home-images-grid-item">
+        <div class="home-images-grid-item-image">
+          <img src="{{ 'home-box.jpg' | asset_url }}"/>
+        </div>
+      </div>
+
+      <div class="home-images-grid-item">
+        <div class="home-images-grid-item-image">
+          <img src="{{ 'home-box.jpg' | asset_url }}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'home-buy' %}
+
+<div class="home-works">
+  <div class="width">
+    <div class="home-works-column">
+      <h2>How it Works</h2>
+      <ul>
+        <li>
+          <strong>1.</strong><br>
+          Buy this jigsaw puzzle
+        </li>
+
+        <li>
+          <strong>2.</strong><br>
+          Complete this puzzle
+        </li>
+
+        <li>
+          <strong>3.</strong><br>
+          Scan your completed puzzle<br>
+          (Hint: it’s a large QR code)
+        </li>
+
+        <li>
+          <strong>4.</strong><br>
+          You can either win or win. 
+        </li>
+
+        <li>
+          <strong>5.</strong><br>
+          Could be $.25. Could be $100,000
+        </li>
+      </ul>
+    </div>
+    <div class="home-works-column">
+      <h2>Features</h2>
+      <ul>
+        <li>500 pieces</li>
+        <li>19.7 X 19.7</li>
+        <li>For ages 3+</li>
+      </ul>
+    </div>
+    <div class="home-works-column">
+      <h2>QR Code</h2>
+      <img src="{{ 'qr-code.svg' | asset_url }}">
+      <p>
+        THIS IS A FAKE QR CODE.<br>
+        IT DOES NOTHING SO DON’T<br>
+        BOTHER TRYING TO SCAN<br>
+        THIS ONE AND CLAIM IT.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% include 'home-buy' %}
+
+{{ content_for_index }}

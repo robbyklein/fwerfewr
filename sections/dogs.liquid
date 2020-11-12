@@ -1,0 +1,37 @@
+<div class="dogs">
+
+  {% for block in section.blocks %}
+    <div class="dog">
+      <div class="image">
+        <img class="on-scroll fade-in" src="{{ block.settings.image | img_url: 'master' }}"/>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Dogs",
+  "settings": [
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dogs"
+    }
+  ]
+}
+{% endschema %}

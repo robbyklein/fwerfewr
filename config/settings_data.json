@@ -1,0 +1,133 @@
+{
+  "current": {
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "1594838656908": {
+        "type": "hero",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/hero.jpg",
+          "text": "<span>cool<\/span> masks for <span>weird<\/span> times",
+          "button_text": "Shop now",
+          "button_url": "shopify:\/\/products\/washable-reusable-face-mask",
+          "long_text": "<a href=\"#\">CDC recommends<\/a> wearing cloth face coverings in public settings where other social distancing measures are difficult to maintain (e.g., grocery stores and pharmacies) especially in areas of significant community-based transmission."
+        }
+      },
+      "1594839572706": {
+        "type": "featured-product",
+        "settings": {
+          "heading": "our most <span>popular<\/span> masks",
+          "product": "washable-reusable-face-mask"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
+      },
+      "1594861124857": {
+        "type": "features",
+        "blocks": {
+          "1594861132752": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/usa.png",
+              "heading": "100% made in the USA",
+              "text": "Fabric is woven domestically, thread is domestic, elastic is domestic, print out and sew all done domestically"
+            }
+          },
+          "1594861434610": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/adjustable.png",
+              "heading": "Adjustable ear strap",
+              "text": "Adjustable ear loops that comfortably fit adults"
+            }
+          },
+          "1594861449557": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/super.png",
+              "heading": "Superior fabric",
+              "text": "Woven 3D textile"
+            }
+          },
+          "1594861467734": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/washable.png",
+              "heading": "Machine washable",
+              "text": "Reusable and environmentally friendly"
+            }
+          },
+          "1594861481133": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dual.png",
+              "heading": "Dual layer polyester fabric",
+              "text": "Made from industrial strength TEX 45 thread"
+            }
+          },
+          "1594861494695": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/filter.png",
+              "heading": "Pocket for optional filter",
+              "text": "Interior pocket for optional PM 2.5 paper filter"
+            }
+          },
+          "1594861510916": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/moisture.png",
+              "heading": "Moisture mangement",
+              "text": "Fabric engineered with moisture management and soil finish"
+            }
+          },
+          "1594861524425": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/soft.png",
+              "heading": "Soft touch",
+              "text": "Superior soft hand for unmatched comfort"
+            }
+          }
+        },
+        "block_order": [
+          "1594861132752",
+          "1594861434610",
+          "1594861449557",
+          "1594861467734",
+          "1594861481133",
+          "1594861494695",
+          "1594861510916",
+          "1594861524425"
+        ],
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "1594838656908",
+      "1594839572706",
+      "1594861124857"
+    ]
+  },
+  "presets": {
+    "Default": {}
+  }
+}

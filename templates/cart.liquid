@@ -1,0 +1,52 @@
+<form action="/cart" method="post" novalidate class="cart-page">
+  <div class="width">
+    
+    {% if cart.item_count > 0 %}
+      <header class="cart-header caps on-scroll fade-in-up">
+        <h1>your cart</h1>
+        <p><span>{{cart.item_count }}</span> items</p>
+      </header>
+
+      <div class="cart-items on-scroll fade-in-up">
+        {% for item in cart.items %}
+          <div class="cart-item caps">
+            <div class="cart-item-quantity">
+              <div class="quantity-selector" data-id="{{ item.variant_id }}">
+                <button type="button" class="quantity-selector-down">-</button>
+                <span class="quantity-selector-value">{{ item.quantity}}</span>
+                <button type="button" class="quantity-selector-up">+</button>
+              </div>
+            </div>
+            <div class="cart-item-title">
+              <h2>
+                <a href="{{ item.url }}">
+                  {{ item.title | replace: "Walter Geoffrey", "" }}{% if item.id == 36147374555300 %}: Original{% elsif item.id == 36203967676580 %}{% include 'walter.svg' %}{% endif %}
+                </a>
+              </h2>
+            </div>
+            <div class="cart-item-price"><h3>{{ item.price | money }}</h3></div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="cart-subtotal caps on-scroll fade-in-up">
+        <h2>Subtotal: {{ cart.total_price | money }}</h2>
+        <h2>Shipping: Free</h2>
+      </div>
+
+      <div class="cart-bottom caps on-scroll fade-in-up">
+        <h2>Total</h2>
+        <h2 class="green">{{ cart.total_price | money }}</h2>
+      </div>
+
+      <button type="submit" name="checkout" class="button caps white full cart-checkout on-scroll fade-in-up">Pay now</button>
+
+    {% else %}
+      <div class="cart-empty caps on-scroll fade-in-up">
+        <h1>cart</h1>
+        <p>{{ 'cart.general.empty' | t }}</p>
+        <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
+      </div>
+    {% endif %}
+  </div>
+</form>
