@@ -4,12 +4,19 @@
 
 <div class="product-split">
   <div class="product-split-left">
-    {% for image in product.images %}
-      <div class="product-split-left-image">
-        <img src="{{ image | image_url }}"/>
-      </div>
-    {% endfor %}
+    <div class="product-split-left-image-slider">
+      {% for image in product.images %}
+        <div class="product-split-left-image">
+          <img src="{{ image | image_url }}"/>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <p class="gallery"><span>Image </span>Gallery</p>
   </div>
+
+
+
   <div class="product-split-right">
     <div class="product-split-right-text">
       <div class="product-split-right-text-description">
@@ -35,8 +42,8 @@
           {% endfor %}
         </select>
 
-        <button type="submit" name="add" id="add-to-cart" class="button white caps">
-          Add to cart
+        <button type="submit" name="add" id="add-to-cart" class="button caps full">
+          Order now
         </button>
       </form>
 

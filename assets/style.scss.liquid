@@ -28,6 +28,8 @@ $black10: rgba(0, 0, 0, 0.1);
 $black5: rgba(0, 0, 0, 0.05);
 
 $green: #26f316;
+$greenHover: #22de14;
+
 $tan: #dfd2bf;
 
 // fonts
@@ -209,6 +211,11 @@ svg {
   text-align: center;
   font-family: $font2;
   font-weight: 900;
+  transition: 0.2s background-color;
+
+  &:hover {
+    background-color: $greenHover;
+  }
 
   &.full {
     display: block;
@@ -404,7 +411,7 @@ svg {
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 26px;
     margin-bottom: 25px;
 
     @media (min-width: $largebp) {
@@ -419,12 +426,23 @@ svg {
 
   p,
   li {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 700;
+
+    @media (min-width: $largebp) {
+      font-size: 21px;
+    }
   }
 
   img {
     margin-bottom: 20px;
+  }
+}
+
+.home-works-column + .home-works-column {
+  margin-top: 50px;
+
+  @media (min-width: $largebp) {
   }
 }
 
@@ -455,10 +473,16 @@ svg {
   margin: 0 auto;
   padding-bottom: 3px;
   font-size: 50px;
+  transition: 0.2s background-color, 0.2s color;
 
   @media (min-width: $largebp) {
     font-size: 88px;
     padding: 0 20px;
+  }
+
+  &:hover {
+    background: $black;
+    color: $green;
   }
 }
 
@@ -503,8 +527,8 @@ svg {
 
 .cart-page {
   background: $black;
-  padding: 60px 0;
-  color: $white;
+  padding: 40px 0;
+  color: $green;
 
   h1,
   h2,
@@ -514,14 +538,22 @@ svg {
   .quantity-selector button,
   a {
     font-size: 23px;
-
-    @media (min-width: $mediumbp) {
-      font-size: 50px;
-    }
+    font-family: $font;
 
     @media (min-width: $largebp) {
-      font-size: 73px;
+      font-size: 27px;
     }
+  }
+
+  .quantity-selector button {
+    @media (min-width: $largebp) {
+      font-size: 40px;
+    }
+  }
+
+  .button {
+    font-size: 35px;
+    line-height: 86px;
   }
 }
 
@@ -534,10 +566,17 @@ svg {
 }
 
 .cart-header {
+  border-bottom: 1px solid $green;
+  padding-bottom: 3px;
+
+  @media (min-width: $largebp) {
+    padding-bottom: 15px;
+  }
+
   h1,
   p {
-    color: $white;
-    font-family: $font2;
+    color: $green;
+    font-family: $font;
   }
 
   span {
@@ -546,25 +585,43 @@ svg {
 }
 
 .cart-subtotal {
-  border-bottom: 3px solid $white;
-  padding: 10px 0;
+  border-bottom: 1px solid $green;
+  padding: 24px 0;
+  display: block;
 
   @media (min-width: $mediumbp) {
-    border-bottom: 7px solid $white;
+    border-bottom: 1px solid $green;
     padding: 20px 0;
+  }
+
+  @media (min-width: $largebp) {
+    padding: 30px 0;
+  }
+
+  & > * + * {
+    margin-top: 15px;
   }
 }
 
 .cart-item {
   display: flex;
-  padding: 10px 0;
-  border-bottom: 3px solid $white;
-  font-family: $font2;
+  padding: 24px 0;
+  border-bottom: 1px solid $green;
   align-items: center;
 
   @media (min-width: $mediumbp) {
-    border-bottom: 7px solid $white;
-    padding: 20px 0;
+    border-bottom: 1px solid $green;
+    padding: 30px 0;
+  }
+}
+
+.cart-item-image {
+  display: none;
+
+  @media (min-width: $mediumbp) {
+    display: block;
+    width: 140px;
+    margin-right: 40px;
   }
 }
 
@@ -577,9 +634,24 @@ svg {
     margin: 0 40px;
   }
 
+  .mobile {
+    @media (min-width: $largebp) {
+      display: none;
+    }
+  }
+
+  .desktop {
+    display: none;
+
+    @media (min-width: $largebp) {
+      display: block;
+    }
+  }
+
   a {
     color: $green;
     transition: 0.2s color;
+    display: block;
 
     &:hover {
       color: $white;
@@ -587,27 +659,27 @@ svg {
   }
 
   svg {
-    width: 90px;
+    width: 90%;
+    max-width: 300px;
     display: inline-block;
     vertical-align: middle;
     margin: -2px 0 0 5px;
 
-    @media (min-width: $mediumbp) {
-      width: 200px;
-      margin: -2px 0 0 10px;
-    }
-
     @media (min-width: $largebp) {
-      width: 260px;
+      max-width: none;
     }
   }
 }
 
 .cart-bottom {
-  padding: 10px 0;
+  padding: 24px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: $largebp) {
+    padding: 30px 0;
+  }
 
   .green {
     color: $green;
@@ -619,7 +691,7 @@ svg {
 }
 
 .cart-checkout {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .cart-empty {
@@ -654,7 +726,7 @@ svg {
   &,
   button {
     font-size: 73px;
-    color: $white;
+    color: $green;
   }
 
   button {
@@ -775,6 +847,11 @@ svg {
 
 .header {
   padding: 18px 0;
+  background: $green;
+
+  &.black {
+    background: $black;
+  }
 
   .width {
     display: flex;
@@ -799,18 +876,33 @@ svg {
 .header-logo {
   flex: 1;
   margin-right: 20px;
+  transition: 0.2s color, 0.2s background-color, 0.2s opacity;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .header-cart {
-  background: $green;
-  color: $black;
+  background: $black;
+  color: $green;
   padding: 0 8px 3px;
   display: inline-block;
   font-size: 20px;
+  transition: 0.2s color, 0.2s background-color, 0.2s opacity;
 
   @media (min-width: $largebp) {
     font-size: 26px;
     margin-left: 40px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .black & {
+    background: $green;
+    color: $black;
   }
 }
 
@@ -819,8 +911,11 @@ svg {
 */
 
 .product-split {
+  background: $white;
+
   @media (min-width: $largebp) {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -833,27 +928,74 @@ svg {
 
 .product-split-left {
   background: white;
-  display: flex;
-  align-items: center;
-  padding-bottom: 100px;
+  position: relative;
+  padding-bottom: 60px;
+
+  @media (min-width: $xlargebp) {
+    font-size: 18px;
+  }
+
+  .gallery {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    z-index: 2;
+    color: $black;
+    font-family: $font2;
+    text-align: center;
+    transform: translateX(-50%);
+
+    @media (min-width: $xlargebp) {
+      font-size: 18px;
+    }
+
+    span {
+      display: none;
+
+      @media (min-width: $xlargebp) {
+        display: inline;
+      }
+    }
+  }
 
   .slick-next,
   .slick-prev {
     position: absolute;
-    bottom: 60px;
+    bottom: -30px;
+    width: 80px;
+    height: 40px;
+    background-size: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: transparent;
+    font-size: 0;
+    z-index: 10;
+
+    @media (min-width: $largebp) {
+      width: 135px;
+      background-size: 135px;
+    }
   }
 
   .slick-next {
     right: 40px;
+    background-image: url("{{ 'arrow-right.svg' | asset_url }}");
   }
 
   .slick-prev {
     left: 40px;
+    background-image: url("{{ 'arrow-left.svg' | asset_url }}");
   }
 }
 
+.product-split-left-image-slider {
+}
+
 .product-split-left-image {
+  width: 100%;
+
   img {
+    width: 100%;
     max-width: 700px;
     margin: 0 auto;
   }
@@ -864,26 +1006,78 @@ svg {
   justify-content: center;
   align-items: center;
   padding: 60px 0;
+  background: $black;
 }
 
 .product-split-right-text {
   width: 90%;
   max-width: 500px;
 
-  h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
+  p {
+    font-size: 22px;
 
     @media (min-width: $largebp) {
-      font-size: 36px;
+      font-size: 27px;
     }
   }
 
-  li {
-    font-size: 21px;
+  a {
+    color: $green;
+    text-decoration: underline;
+    transition: 0.2s color;
+
+    &:hover {
+      color: $white;
+    }
   }
 
-  li + li {
-    margin-top: 20px;
+  ul {
+    margin-top: 40px;
+  }
+
+  li {
+    font-size: 16px;
+
+    @media (min-width: $largebp) {
+      font-size: 18px;
+    }
+  }
+
+  .button {
+    font-size: 32px;
+    line-height: 80px;
+    margin-top: 30px;
+
+    @media (min-width: $largebp) {
+      font-size: 46px;
+      line-height: 116px;
+      margin-top: 40px;
+    }
+  }
+}
+
+.product-split-right-text-price {
+  margin: 25px 0;
+  text-align: center;
+
+  span {
+    display: block;
+    line-height: 1;
+  }
+  .price {
+    font-size: 70px;
+
+    @media (min-width: $largebp) {
+      font-size: 100px;
+    }
+  }
+
+  .shipping {
+    font-size: 24px;
+    margin-top: -3px;
+
+    @media (min-width: $largebp) {
+      font-size: 28px;
+    }
   }
 }

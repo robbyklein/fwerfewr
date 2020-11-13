@@ -1,13 +1,20 @@
 
-<header class="header caps">
+
+
+<header class="header caps {% if template == 'cart' %}black{% endif %}">
   <div class="width">
 
     <a class="header-logo" href="/">
-      <span class="mobile">{% include 'home-hero-text-mobile.svg' %}</span>
-      <span class="desktop">{% include 'home-hero-text.svg' %}</span>
+      {% if template == 'cart' %}
+        <span class="mobile">{% include 'home-hero-text-mobile.svg' %}</span>
+        <span class="desktop">{% include 'home-hero-text.svg' %}</span>
+      {% else %}
+        <span class="mobile">{% include 'home-hero-text-mobile-white.svg' %}</span>
+        <span class="desktop">{% include 'home-hero-text-white.svg' %}</span>
+      {% endif %}
     </a>
 
-    <a class="header-cart">
+    <a href="/cart" class="header-cart">
       Cart ({{ cart.item_count }})
     </a>
 

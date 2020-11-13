@@ -1,8 +1,53 @@
 $(document).ready(function () {
-  if ($(".product-split-left").length) {
-    $(".product-split-left").slick({
+  if ($(".product-split-left-image-slider").length) {
+    $(".product-split-left-image-slider").slick({
       infinite: true,
       slidesToShow: 1,
     });
   }
+
+  $(".quantity-selector-up").on("click", function () {
+    const currentValue = Number($(this).prev().html());
+    const nextValue = currentValue + 1;
+    const variant = Number($(this).parent().attr("data-id"));
+    const data = {
+      items: [
+        {
+          quantity: 1,
+          id: variant,
+        },
+      ],
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "/cart/add.js",
+      data: data,
+      success: function (data) {
+        window.location.reload();
+      },
+      dataType: "json",
+    });
+  });
+
+  $(".quantity-selector-down").on("click", function () {
+    const currentValue = Number($(this).next().html());
+    const nextValue = currentValue - 1;
+    const variant = Number($(this).parent().attr("data-id"));
+
+    const data = {
+      id: variant,
+      quantity: nextValue,
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "/cart/change.js",
+      data: data,
+      success: function (data) {
+        window.location.reload();
+      },
+      dataType: "json",
+    });
+  });
 });
