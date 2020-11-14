@@ -26,7 +26,7 @@
 
       <p class="product-split-right-text-price">
         <span class="price">{{ product.price | money }}</span>
-        <span class="shipping">+ $5.99 shipping</span>
+        {% comment %} <span class="shipping">+ $5.99 shipping</span> {% endcomment %}
       </p>
 
       <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">

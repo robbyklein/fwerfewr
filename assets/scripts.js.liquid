@@ -50,4 +50,20 @@ $(document).ready(function () {
       dataType: "json",
     });
   });
+
+  $('form[action="/cart/add"]').on("submit", function (e) {
+    e.preventDefault();
+
+    var id = $(this).find('[name="id"]').val();
+
+    $.ajax({
+      type: "POST",
+      url: "/cart/add.js",
+      data: { id: id, quantity: 1 },
+      success: function (data) {
+        window.location.href = "/checkout";
+      },
+      dataType: "json",
+    });
+  });
 });
