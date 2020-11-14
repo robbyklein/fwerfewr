@@ -20,5 +20,6 @@
     {{ content_for_layout }}
     {% section 'footer' %}
     <script src="{{ 'scripts.js' | asset_url}}" defer></script>
-</body>
+{% render 'quantity-breaks-now', customer: customer, template: template, product: product, cart: cart %}
+        </body>
 </html> 
